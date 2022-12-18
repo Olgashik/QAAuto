@@ -44,5 +44,3 @@ Console.WriteLine("AverageValue  {0}", sumArray / (float) array.Length);
 Console.WriteLine("Minimum {0}", minimum);
 
 Console.WriteLine("Maximum {0}", maximum);
-
-
