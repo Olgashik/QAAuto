@@ -1,17 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Candidates
+﻿namespace Candidates
 {
     internal class Address
     {
-        public int House;
-        public int Flat;
-        public string Street;
-        public string City;
+        private int _house;
+        public int House 
+        { 
+            get 
+            { 
+               return _house; 
+            } 
+            set 
+            { 
+                if (value > 0) 
+                { 
+                    _house = value;
+                } 
+            } 
+        }
+
+        private int _flat;
+
+        public int Flat
+        {
+            get
+            {
+                return _flat;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    _flat = value;
+                }
+            }
+        }
+        public string Street { get; set; }
+        public string City { get; set; }
 
         public Address(int house, int flat, string street, string city)
         {
