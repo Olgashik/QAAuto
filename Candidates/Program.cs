@@ -6,17 +6,7 @@ namespace Candidates
     {
         const string SUBJECT = "Math";
 
-        static short GetScore(Candidate cand, string subj)
-        {
-            for (int j = 0; j < cand.SubjectScores.Length; j++)
-            {
-                if (cand.SubjectScores[j].ItemName == subj)
-                {
-                    return cand.SubjectScores[j].Score;
-                }
-            }
-            return -1;
-        }
+       
         static void Main(string[] args)
         {
             Address vasyaAddress = new Address(11, 12, "vasyastreet", "vasyacity");
@@ -67,6 +57,17 @@ namespace Candidates
                 }
             }
             Console.WriteLine(maxScore);
+        }
+        static short GetScore(Candidate cand, string subj)
+        {
+            for (int j = 0; j < cand.SubjectScores.Length; j++)
+            {
+                if (cand.SubjectScores[j].ItemName == subj)
+                {
+                    return cand.SubjectScores[j].Score;
+                }
+            }
+            return -1;
         }
     }
 }
