@@ -4,8 +4,8 @@
     {
         public string[] Courses { get; set; }
 
-        public Teacher(Person person, int taxID, string[] courses)
-            : base(person, taxID)
+        public Teacher(Person person, int taxId, string[] courses)
+            : base(person, taxId)
         {
             Courses = courses;
         }

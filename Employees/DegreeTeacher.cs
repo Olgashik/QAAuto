@@ -6,8 +6,8 @@
         
         public string TitleTeacher { get; }
 
-        public DegreeTeacher(Person person, int taxID, string[] course,string degreecSience, string titleTeacher)
-            : base (person, taxID, course)
+        public DegreeTeacher(Person person, int taxId, string[] course,string degreecSience, string titleTeacher)
+            : base (person, taxId, course)
         {
             DegreecSience = degreecSience;
             TitleTeacher = titleTeacher;

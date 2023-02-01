@@ -16,13 +16,18 @@
             var vasyaCourses = new string[] { "Literature" };
             var vasyaTeacher = new Teacher(vasya, 113, vasyaCourses);
 
+            var fedya = new Person("Fedya", "Kolyakin");
+            var fedyaCourses = new string[] { "Mathematics", "Physics" };
+            var fedyaTeacher = new DegreeTeacher(fedya, 114, fedyaCourses, "1st", "master");
+
             var tom = new Person("Tom", "Tomek");
             var tomSupportStaff = new SupportStaff(tom, 221, "Cleaner", "university building cleaning");
 
             var chrom = new Person("Chrom", "Chromuch");
             var chromSupportStaff = new SupportStaff(chrom, 222, "Security guard", "university building security");
 
-            var universityEmployees = new UniversityEmployee[] { kolyaTeacher, petyaTeacher, vasyaTeacher, tomSupportStaff, chromSupportStaff };
+            var universityEmployees = new UniversityEmployee[] { kolyaTeacher, petyaTeacher, vasyaTeacher,
+                tomSupportStaff, chromSupportStaff, fedyaTeacher};
 
             Console.WriteLine("-------------------");
             foreach (var employee in universityEmployees)

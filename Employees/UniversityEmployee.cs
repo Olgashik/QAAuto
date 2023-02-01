@@ -1,14 +1,30 @@
 ﻿namespace Employees
 {
-    internal class UniversityEmployee
+    internal abstract class UniversityEmployee
     {
-        private Person Person;
-        private int TaxID; 
+        public Person Person { get; set; }
         
-        public UniversityEmployee(Person person, int taxID)
+        private int _id;
+        public int TaxId
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    _id = value;
+                }
+            }
+        }
+
+        
+        public UniversityEmployee(Person person, int taxId)
         {
             Person = person;
-            TaxID = taxID;
+            TaxId = taxId;
         }
 
         public virtual string GetOfficialDuties()
